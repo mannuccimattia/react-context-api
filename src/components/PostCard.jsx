@@ -4,9 +4,18 @@ const PostCard = ({ post }) => {
 
   return (
     <div className="mt-4">
-      <div>{title}</div>
-      <div>{content}</div>
-      <div>{category}</div>
+      <div className="row">
+        <div className="col-12">
+          <h3>{title}</h3>
+        </div>
+        <div className="col-12">
+          <p>{content}</p>
+        </div>
+        <div className="col-12">
+          <div><em>{category}</em></div>
+        </div>
+        <hr />
+      </div>
     </div>
   )
 }

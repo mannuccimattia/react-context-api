@@ -7,13 +7,17 @@ const PostsList = () => {
 
   return (
     <>
-      <h2>Post List</h2>
+      <div className="row">
+        <div className="col-auto bg-secondary mx-auto px-5 rounded text-white">
+          <h2 className="text-center">Post List</h2>
+        </div>
+      </div>
 
-      <hr />
-
-      {posts.map(post => (
-        <PostCard key={post.id} post={post} />
-      ))}
+      <div className="col 12">
+        {posts.map(post => (
+          <PostCard key={post.id} post={post} />
+        ))}
+      </div>
     </>
   )
 }

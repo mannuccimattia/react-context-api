@@ -24,14 +24,16 @@ const PostsPage = () => {
 
   return (
     <>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12 bg-dark text-white p-3 mb-3">
+            <h1>Posts Page</h1>
+          </div>
+        </div>
+      </div>
+
       <div className="container">
-        <h1>Posts Page</h1>
-
-        <hr />
-
         <PostsList />
-
-        <hr />
 
         <button
           className={
@@ -41,6 +43,7 @@ const PostsPage = () => {
         >
           Get more
         </button>
+
         <div>
           {alertData.type != "" && alertData.message != "" ? <Alert /> : ""}
         </div>
