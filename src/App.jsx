@@ -25,12 +25,17 @@ const posts = [
   },
 ];
 
+import PostsContext from "./assets/contexts/PostsContext";
 import PostsPage from "./pages/PostsPage";
 
 const App = () => {
   return (
     <>
-      <PostsPage posts={posts} />
+      <PostsContext.Provider value={posts}>
+
+        <PostsPage />
+
+      </PostsContext.Provider>
     </>
   )
 }

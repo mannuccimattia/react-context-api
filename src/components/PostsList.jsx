@@ -1,4 +1,9 @@
-const PostsList = ({ posts }) => {
+import { useContext } from "react"
+import PostsContext from "../assets/contexts/PostsContext"
+
+const PostsList = () => {
+  const posts = useContext(PostsContext);
+
   return (
     <>
       <h2>Post List</h2>

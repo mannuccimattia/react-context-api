@@ -1,6 +1,6 @@
 import PostsList from "../components/PostsList"
 
-const PostsPage = ({ posts }) => {
+const PostsPage = () => {
   return (
     <>
       <div className="container">
@@ -8,7 +8,7 @@ const PostsPage = ({ posts }) => {
 
         <hr />
 
-        <PostsList posts={posts} />
+        <PostsList />
       </div>
     </>
   )
