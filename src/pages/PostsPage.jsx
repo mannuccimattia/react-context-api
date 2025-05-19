@@ -7,11 +7,19 @@ const PostsPage = () => {
   const { alertData, setAlertData } = useAlertContext();
 
   const handleAlert = () => {
-    setAlertData({
-      type: "warning",
-      message: `https://www.w3schools.com/`
-    });
+    (alertData.type != "" && alertData.message != "") ? (
+      setAlertData({
+        type: "",
+        message: ""
+      })
+    ) : (
+      setAlertData({
+        type: "warning",
+        message: `https://www.w3schools.com/`
+      })
+    )
   };
+
 
 
   return (
@@ -25,10 +33,14 @@ const PostsPage = () => {
 
         <hr />
 
-        <div
-          className="btn btn-primary"
+        <button
+          className={
+            `btn mb-3 ${alertData.type && alertData.message ? "btn-secondary" : "btn-primary"}`
+          }
           onClick={handleAlert}
-        >Get more</div>
+        >
+          Get more
+        </button>
         <div>
           {alertData.type != "" && alertData.message != "" ? <Alert /> : ""}
         </div>

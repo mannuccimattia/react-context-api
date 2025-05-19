@@ -8,7 +8,11 @@ const Alert = () => {
   return (
     <div className={`alert alert-${type}`}>
       <span>Visit: </span>
-      <a href="https://www.w3schools.com/" target="_blank">
+      <a
+        href="https://www.w3schools.com/"
+        target="_blank"
+        className="text-decoration-none"
+      >
         {message}
       </a>
     </div>
