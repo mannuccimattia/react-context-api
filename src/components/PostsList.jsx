@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import PostsContext from "../assets/contexts/PostsContext"
+import PostCard from "./PostCard";
 
 const PostsList = () => {
   const posts = useContext(PostsContext);
@@ -11,11 +12,7 @@ const PostsList = () => {
       <hr />
 
       {posts.map(post => (
-        <div key={post.id} className="mt-4">
-          <div>{post.title}</div>
-          <div>{post.content}</div>
-          <div>{post.category}</div>
-        </div>
+        <PostCard key={post.id} post={post} />
       ))}
     </>
   )

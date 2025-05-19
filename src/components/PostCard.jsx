@@ -1,5 +1,6 @@
 const PostCard = ({ post }) => {
-  const { title, content, category } = post
+  const { title, content, category } = post;
+
 
   return (
     <div className="mt-4">
