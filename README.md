@@ -28,3 +28,5 @@ const posts = [
 
 #### Bonus
 Implementare un componente Alert gestito tramite Context
+
+DONE
