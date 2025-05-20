@@ -9,7 +9,7 @@ const Alert = () => {
     <div className={`alert alert-${type}`}>
       <span>Visit: </span>
       <a
-        href="https://www.w3schools.com/"
+        href={message}
         target="_blank"
         className="text-decoration-none"
       >
